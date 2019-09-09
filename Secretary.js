@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-module.exports = function writer(data){
+module.exports.writer = function (data){
 
     fs.writeFile('form.txt', data, (err) => {
         if (err){
@@ -11,7 +11,7 @@ module.exports = function writer(data){
 
 }
 
-module.exports = function reader(){
+module.exports.reader = function (){
 
     fs.readFile('./form.txt', (err, data) => {
         if (err){
